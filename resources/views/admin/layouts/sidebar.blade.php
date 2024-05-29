@@ -56,7 +56,7 @@
                 </a>
               </li>
               <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
+                <a href="/gallery" class="sidebar-link">
                   <div class="round-16 d-flex align-items-center justify-content-center">
                     <i class="ti ti-circle"></i>
                   </div>
@@ -74,7 +74,7 @@
             </a>
             <ul aria-expanded="false" class="collapse first-level">
               <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
+                <a href="/category-product" class="sidebar-link">
                   <div class="round-16 d-flex align-items-center justify-content-center">
                     <i class="ti ti-circle"></i>
                   </div>
@@ -277,7 +277,7 @@
                   <span class="hide-menu">Alur Kerja</span>
                 </a>
               </li>
-              
+
             </ul>
           </li>
         </ul>

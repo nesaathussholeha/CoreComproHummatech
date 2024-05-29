@@ -21,3 +21,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// galery
+Route::get('/gallery', function () {
+    return view('admin.page.services.gallery');
+});
+// end category
+
+// product
+Route::get('/category-product', function () {
+    return view('admin.page.product.category');
+});
+
+// end product
