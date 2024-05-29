@@ -9,9 +9,9 @@
 
         </ul>
         <div class="d-block d-lg-none">
-            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/dark-logo.svg"
+            <img src="{{ asset('company.png') }}"
                 class="dark-logo" width="180" alt="" />
-            <img src="https://demos.adminmart.com/premium/bootstrap/modernize-bootstrap/package/dist/images/logos/light-logo.svg"
+            <img src="{{ asset('company.png') }}"
                 class="light-logo" width="180" alt="" />
         </div>
         <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
