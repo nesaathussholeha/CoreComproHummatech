@@ -19,12 +19,12 @@
     <div class="uk-container">
         <div class="uk-grid uk-flex uk-flex-center">
             <div class="uk-width-1-1">
-                <h4 class="uk-text-center "> <span class="in-highlight">Struktur Organisasi</span></h4>
+                <h4 class="uk-text-center "> <span class="in-highlight">Struktur Perusahaan</span></h4>
                 <h2 class="uk-text-center">
-                    Fondasi Keberhasilan dan Kolaborasi di Tempat Kerja
+                    Struktur perusahaan yang Membawa Inovasi dan Keberlanjutan
                 </h2>
-                <div class="">
-                    <img src="{{ asset('assets_landing/img/structure_organisasi.png') }}" alt="" srcset="">
+                <div class="uk-flex uk-flex-center">
+                    <img src="{{ asset('assets_landing/img/structure_business-Hummatech.jpg') }}" alt="" srcset="">
                 </div>
             </div>
         </div>
