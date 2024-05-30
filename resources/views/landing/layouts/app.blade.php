@@ -10,7 +10,7 @@
     <!-- meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Premium HTML5 Template by Indonez">
+    <meta name="description" content="Hummatech ">
     <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
     <meta name="author" content="Indonez">
     <meta name="theme-color" content="#FCB42D">
