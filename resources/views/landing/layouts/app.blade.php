@@ -50,6 +50,7 @@
     <!-- header begin -->
     @include('landing.layouts.header')
     <!-- header end -->
+    @yield('header')
     <main>
         <!-- slideshow content begin -->
             @yield('content')

@@ -9,7 +9,7 @@
                             height="40">
                     </a>
                     <ul class="uk-navbar-nav uk-visible@m">
-                        <li><a href="markets.html">Dashboard</a>
+                        <li><a href="/">Dashboard</a>
                         </li>
                         <li><a href="#">Tentang<span data-uk-navbar-parent-icon></span></a>
                             <div class="uk-navbar-dropdown">

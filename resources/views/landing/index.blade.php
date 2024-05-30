@@ -120,7 +120,7 @@
 @section('content')
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <div class="uk-section uk-padding-remove-vertical in-slideshow-gradient">
-        <div id="particles-js" class="uk-light in-slideshow uk-background-contain" data-src="img/in-equity-decor-1.svg"
+        <div id="particles-js" class="uk-light in-slideshow uk-background-contain" data-src="{{ asset('assets/images/mischool.jpg') }}"
             data-uk-img data-uk-slideshow>
             <hr>
             <ul class="uk-slideshow-items">
@@ -133,7 +133,6 @@
                                     tantangan di era revolusi industri 4.0.</p>
                                 <div class="uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-medium-top uk-visible@s"
                                     data-uk-grid>
-
                                     <div class="uk-visible@m">
                                         <button class="uk-button uk-button-primary uk-border-rounded"
                                             style="background-color:#FCB42D; color:">
@@ -165,15 +164,15 @@
         <div class="uk-container uk-margin-large-bottom">
             <div class="uk-grid uk-flex uk-flex-middle">
                 <div class="uk-width-expand@m">
-                    <h2 class="uk-margin-small-bottom"><span class="in-highlight">Menghadirkan Solusi Terintegrasi untuk
-                            Masa Digital</span></h2>
+                    <h1 class="uk-margin-small-bottom"><span class="in-highlight">Menghadirkan Solusi Terintegrasi untuk
+                            Masa Digital</span></h1>
                     <p class="uk-margin-top">Kini Hummatech bertransformasi menjadi perusahaan yang mampu
                         menjawab tantangan di era revolusi industri 4.0 dengan menciptakan produk berbasis
                         integrated system berupa perangkat lunak, seperti </p>
-                    <hr class="uk-margin-medium-top uk-margin-medium-bottom">
-                    <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
-                        Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
-                    </button>
+                        <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
+                            Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
+                        </button>
+                        <hr class="uk-margin-medium-top uk-margin-medium-bottom">
                 </div>
                 <div class="uk-width-2xlarge uk-flex uk-flex-right uk-flex-center@s">
                     <div class="">
@@ -189,7 +188,7 @@
         <div class="uk-container">
             <div class="uk-grid">
                 <div class="uk-width-1-1">
-                    <h2 cl>Layanan Kami</h2>
+                    <h1 cl>Layanan Kami</h1>
                 </div>
             </div>
             <div class="uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-bottom"
@@ -274,7 +273,7 @@
         <div class="uk-container">
             <div class="uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m in-card-10" data-uk-grid>
                 <div class="uk-width-1-1">
-                    <h2 class="uk-margin-remove uk-text-center">Menghadirkan produk dengan kualitas dan inovasi terbaik</h2>
+                    <h1 class="uk-margin-remove uk-text-center">Menghadirkan produk dengan kualitas dan inovasi terbaik</h1>
                     <p class="uk-text-center">
                         Kami berkomitmen untuk menghadirkan produk-produk berkualitas tinggi yang dipadukan dengan inovasi
                         terdepan, memenuhi kebutuhan dan harapan konsumen dengan sempurna.
@@ -329,7 +328,7 @@
         </div>
     </div>
     <!-- section content begin -->
-    <div class="uk-section">
+    <div class="uk-section" style="background-color: #edeff1">
         <div class="uk-width-1-1@m uk-text-center ">
             <h1><span class="in-highlight">MITRA KAMI</span></h1>
             <p class="uk-text-lead uk-margin-remove-top "> Tumbuh bersama: Kolaborasi menuju kesuksesan</p>
@@ -338,8 +337,7 @@
             <div class="uk-grid" data-uk-grid>
                 <div class="uk-width-1-1">
                     <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
-                        <div class="uk-grid-collapse uk-child-width-1-6@m uk-child-width-1-2@s
-uk-text-center in-client-logo-6"
+                        <div class="uk-grid-collapse uk-child-width-1-6@m uk-child-width-1-2@s uk-text-center in-client-logo-6"
                             data-uk-grid>
                             <div class="uk-tile uk-tile-default">
                                 <img class="uk-margin-remove" src="assets_landing/img/in-equity-payment-1.svg"
@@ -480,37 +478,45 @@ uk-child-width-1-3@m uk-margin-top"
     </div>
     <!-- section content end -->
     <!-- section content begin -->
-    <div class="uk-section">
+    <div class="uk-section" style="background-color: #edeff1">
         <div class="uk-width-1-1@m uk-text-center ">
             <h1><span class="in-highlight">PORTOFOLIO</span></h1>
             <h3 class="uk-text-lead uk-margin-remove-top ">Inspirasi dari Karya: Portfolio Hummatech Menggambarkan
                 Keunggulan Produk</h3>
         </div>
-        <div class="uk-container uk-margin-medium-top	">
-            <div class="container">
-                <div class="card">
-                    <div class="img-box">
-                        <img src="http://4.bp.blogspot.com/_ACU2rg_M86M/TOG_p3liNuI/AAAAAAAAAbE/yMt7vawwkNQ/s1600/homem-vermelho.jpg"
-                            alt="">
+        <div class="uk-container">
+            <ul class="uk-grid-small uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center" data-uk-grid="masonry: true">
+                <li>
+                    <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets_landing/img/blockit/in-gallery-image-1.jpg" alt="gallery-image" data-width data-height>
                     </div>
-                    <div class="content">
-                        <h2>Alguém Famoso<br><span>UX/UI Designer</span></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus, dolor non egestas
-                            mattis.</p>
-                        <ul>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
+                </li>
+                <li>
+                    <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets_landing/img/blockit/in-gallery-image-2.jpg" alt="gallery-image" data-width data-height>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets_landing/img/blockit/in-gallery-image-3.jpg" alt="gallery-image" data-width data-height>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets_landing/img/blockit/in-gallery-image-4.jpg" alt="gallery-image" data-width data-height>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets_landing/img/blockit/in-gallery-image-5.jpg" alt="gallery-image" data-width data-height>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-inline-clip uk-transition-toggle uk-border-rounded" tabindex="0">
+                        <img class="uk-transition-scale-up uk-transition-opaque" src="assets_landing/img/blockit/in-gallery-image-6.jpg" alt="gallery-image" data-width data-height>
+                    </div>
+                </li>
+            </ul>
         </div>
         <div class="uk-width-1-1@m uk-text-center uk-margin-medium-top">
             <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
