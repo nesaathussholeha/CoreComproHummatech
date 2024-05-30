@@ -1,315 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
+
+<!-- Mirrored from www.indonez.com/html-demo/equity/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 May 2024 05:54:57 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @yield('description')
-    <!-- ========== Page Title ========== -->
-    @hasSection('title')
-        <title>{!! "{$__env->yieldContent('title')} &mdash; " . config('app.name', 'Laravel') !!}</title>
-    @else
-        <title>{{ config('app.name', 'Laravel') }}</title>
-    @endif
-
-    @yield('seo')
-
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="{{ asset('mobilelogo.png') }}" type="image/x-icon">
-
-    <!-- ========== Start Stylesheet ========== -->
-    <link href="{{ asset('assets-home/css/bootstrap.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/font-awesome.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/themify-icons.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/elegant-icons.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/flaticon-set.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/magnific-popup.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/owl.theme.default.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/animate.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/css/bootsnav.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets-home/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-home/css/responsive.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    <!-- ========== End Stylesheet ========== -->
-
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Premium HTML5 Template by Indonez">
+    <meta name="keywords" content="blockit, uikit3, indonez, handlebars, scss, javascript">
+    <meta name="author" content="Indonez">
+    <meta name="theme-color" content="#FCB42D">
+    <!-- preload assets -->
+    <link rel="preload" href="assets_landing/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets_landing/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets_landing/fonts/archivo-v18-latin-regular.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="assets_landing/fonts/archivo-v18-latin-300.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="assets_landing/fonts/archivo-v18-latin-700.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="assets_landing/css/style.css" as="style">
+    <link rel="preload" href="assets_landing/js/vendors/uikit.min.js" as="script">
+    <link rel="preload" href="assets_landing/js/utilities.min.js" as="script">
+    <link rel="preload" href="assets_landing/js/config-theme.js" as="script">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="assets_landing/css/style.css">
+    <!-- uikit -->
+    <script src="assets_landing/js/vendors/uikit.min.js"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets_landing/img/favicon.ico" type="image/x-icon">
+    <!-- touch icon -->
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png">
+    <title>Homepage</title>
     @yield('style')
-
-    <style>
-        footer::after {
-            background: url({{ asset('assets-home/img/map.svg') }});
-        }
-    </style>
-
 </head>
 
 <body>
-
-    <!-- Start Preloader
-    ============================================= -->
-    <div id="preloader">
-        <div id="earna-preloader" class="earna-preloader">
-            <div class="animation-preloader">
-                <div class="spinner"></div>
-                <div class="txt-loading">
-                    <span data-text-preloader="H" class="letters-loading">
-                        H
-                    </span>
-                    <span data-text-preloader="U" class="letters-loading">
-                        U
-                    </span>
-                    <span data-text-preloader="M" class="letters-loading">
-                        M
-                    </span>
-                    <span data-text-preloader="M" class="letters-loading">
-                        M
-                    </span>
-                    <span data-text-preloader="A" class="letters-loading">
-                        A
-                    </span>
-                    <span data-text-preloader="T" class="letters-loading">
-                        T
-                    </span>
-                    <span data-text-preloader="E" class="letters-loading">
-                        E
-                    </span>
-                    <span data-text-preloader="C" class="letters-loading">
-                        C
-                    </span>
-                    <span data-text-preloader="H" class="letters-loading">
-                        H
-                    </span>
+    <!-- page loader begin -->
+    <div class="page-loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- page loader end -->
+    <!-- header begin -->
+    @include('landing.layouts.header')
+    <!-- header end -->
+    <main>
+        <!-- slideshow content begin -->
+            @yield('content')
+        <!-- section content end -->
+    </main>
+    <!-- footer begin -->
+    <footer>
+        <div class="uk-section">
+            <div class="uk-container uk-margin-top">
+                <div class="uk-grid">
+                    <div class="uk-width-2-3@m">
+                        <div class="uk-child-width-1-2@s uk-child-width-1-3@m" data-uk-grid="">
+                            <div>
+                                <h5>Instruments</h5>
+                                <ul class="uk-list uk-link-text">
+                                    <li><a href="#">Stock</a></li>
+                                    <li><a href="#">Indexes</a></li>
+                                    <li><a href="#">Currencies</a></li>
+                                    <li><a href="#">Metals<span
+                                                class="uk-label uk-margin-small-left in-label-small">Popular</span></a>
+                                    </li>
+                                    <li><a href="#">Oil and gas</a></li>
+                                    <li><a href="#">Cryptocurrencies<span
+                                                class="uk-label uk-margin-small-left in-label-small">Popular</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5>Analytics</h5>
+                                <ul class="uk-list uk-link-text">
+                                    <li><a href="#">World Markets</a></li>
+                                    <li><a href="#">Trading Central<span
+                                                class="uk-label uk-margin-small-left in-label-small">New</span></a>
+                                    </li>
+                                    <li><a href="#">Forex charts online</a></li>
+                                    <li><a href="#">Market calendar</a></li>
+                                    <li><a href="#">Central banks<span
+                                                class="uk-label uk-margin-small-left in-label-small">New</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="in-margin-top-60@s">
+                                <h5>Education</h5>
+                                <ul class="uk-list uk-link-text">
+                                    <li><a href="#">Basic course</a></li>
+                                    <li><a href="#">Introductory webinar</a></li>
+                                    <li><a href="#">About academy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-3@m uk-flex uk-flex-right@m">
+                        <!-- social media begin -->
+                        <div class="uk-flex uk-flex-column social-media-list">
+                            <div><a href="https://www.facebook.com/indonez"
+                                    class="color-facebook text-decoration-none"><i class="fab fa-facebook-square"></i>
+                                    Facebook</a></div>
+                            <div><a href="https://twitter.com/indonez_tw"
+                                    class="color-twitter text-decoration-none"><i class="fab fa-twitter"></i>
+                                    Twitter</a></div>
+                            <div><a href="https://www.instagram.com/indonez_ig"
+                                    class="color-instagram text-decoration-none"><i class="fab fa-instagram"></i>
+                                    Instagram</a></div>
+                            <div><a href="#some-link" class="color-telegram text-decoration-none"><i
+                                        class="fab fa-telegram"></i> Telegram</a></div>
+                            <div><a href="#some-link" class="color-youtube text-decoration-none"><i
+                                        class="fab fa-youtube"></i> Youtube</a></div>
+                        </div>
+                        <!-- social media end -->
+                    </div>
                 </div>
             </div>
-            <div class="loader">
-                <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
+            <hr class="uk-margin-large">
+            <div class="uk-container">
+                <div class="uk-grid uk-flex uk-flex-middle">
+                    <div class="uk-width-2-3@m uk-text-small">
+                        <ul class="uk-subnav uk-subnav-divider uk-visible@s" data-uk-margin="">
+                            <li><a href="#">Risk disclosure</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Return policy</a></li>
+                            <li><a href="#">Customer Agreement</a></li>
+                            <li><a href="#">AML policy</a></li>
+                        </ul>
+                        <p class="copyright-text">©2021 Equity Markets Incorporated. All Rights Reserved.</p>
                     </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
+                    <div class="uk-width-1-3@m uk-flex uk-flex-right uk-visible@m">
+                        <span class="uk-margin-right"><img src="img/in-lazy.gif"
+                                data-src="img/in-footer-mastercard.svg" alt="footer-payment" width="34"
+                                height="21" data-uk-img=""></span>
+                        <span><img src="img/in-lazy.gif" data-src="img/in-footer-visa.svg" alt="footer-payment"
+                                width="50" height="16" data-uk-img=""></span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Preloader -->
+    </footer>
+    <!-- footer end -->
+    <!-- to top begin -->
+    <a href="#" class="to-top uk-visible@m" data-uk-scroll>
+        Top<i class="fas fa-chevron-up"></i>
+    </a>
+    <!-- to top end -->
+    <!-- javascript -->
+    @yield('script')
+    <script src="assets_landing/js/vendors/tradingview-widget.min.js"></script>
+    <script src="assets_landing/js/vendors/particles.min.js"></script>
+    <script src="assets_landing/js/config-particles.js"></script>
+    <script src="assets_landing/js/utilities.min.js"></script>
+    <script src="assets_landing/js/config-theme.js"></script>
+</body>
+<!-- Mirrored from www.indonez.com/html-demo/equity/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 May 2024 05:55:09 GMT -->
 
-    <!-- Header
-    ============================================= -->
-    @include('landing.layouts.header')
-    <!-- End Header -->
-
-    @yield('content')
-
-    <!-- Start Footer
-    ============================================= -->
-    <footer class="bg-dark text-light">
-        <div class="container">
-            <div class="f-items default-padding">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 item">
-                        <div class="f-item about">
-                            <img src="{{ asset('assets/images/LOGO-HUMMATECH_Putih.png') }}"
-                                style="height: 48px;width: auto;" alt="Logo">
-
-                            @isset($profile)
-                                @if (isset($profile[0]) && !empty($profile[0]->description))
-                                    <p>{!! Str::limit(strip_tags($profile[0]->description), 300) !!}</p>
-                                @else
-                                    <p>
-                                        Bertransformasi menjadi perusahaan yang mampu menjawab tantangan di era revolusi
-                                        industri 4.0
-                                    </p>
-                                @endif
-                                <a href="{{ url('/about/profile') }}">Lihat Selengkapnya</a>
-                            @else
-                                <p>
-                                    Bertransformasi menjadi perusahaan yang mampu menjawab tantangan di era revolusi
-                                    industri 4.0
-                                </p>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 item">
-                            <div class="f-item link">
-                                <h4 class="widget-title">Sosial Media</h4>
-                                <ul>
-                                    @forelse ($socmed as $socmed)
-                                        <li>
-                                            <a href="{{ $socmed->link }}" target="_blank"
-                                                style="display: flex;gap: .5rem;align-items: center">
-                                                <i class="fas fa-angle-right"></i>
-                                                <img alt="Facebook Logo" src="{{ asset("storage/{$socmed->image}") }}"
-                                                    height="16px" class="mb-0" width="16px" />
-                                                {{ $socmed->platform }}
-                                            </a>
-                                        </li>
-                                    @empty
-                                        <li>
-                                            Tidak ada data
-                                        </li>
-                                    @endforelse
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 item">
-                            <div class="f-item link">
-                                <h4 class="widget-title">Layanan Kami</h4>
-                                <ul>
-                                    @forelse ($services as $service)
-                                        <li>
-                                            <a href="{{ url("/services/{$service->slug}") }}"><i
-                                                    class="fas fa-angle-right"></i> {{ $service->name }}</a>
-                                        </li>
-                                    @empty
-                                        <li>Belum ada data layanan</li>
-                                    @endforelse
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 item">
-                            <div class="f-item contact-widget">
-                                <h4 class="widget-title">Hubungi Kami</h4>
-                                <div class="address">
-                                    <ul>
-                                        <li>
-                                            <div class="icon">
-                                                <i class="fas fa-home"></i>
-                                            </div>
-                                            <div class="content">
-                                                <strong>Alamat:</strong>
-
-                                                @isset($profiles)
-                                                    {{ $profiles->address }}
-                                                @else
-                                                    Perum Permata Regency 1 Blok 10/28, Perun Gpa, Ngijo, Kec. Karang
-                                                    Ploso, Kabupaten Malang, Jawa Timur 65152.
-                                                    @endif
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon">
-                                                    <i class="fas fa-envelope"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <strong>Email:</strong>
-                                                    @isset($profiles)
-                                                        <a href="mailto:{{ $profiles->email }}">{{ $profiles->email }}</a>
-                                                    @else
-                                                        <a href="mailto:info@hummatech.com">info@hummatech.com</a>
-                                                    @endisset
-                                                </div>
-                                            </li>
-                                            <li>
-                                                @if (isset($profile[0]) && !empty($profile[0]))
-                                                    @if ($profile[0]->type != null)
-                                                        <div class="icon">
-                                                            <i
-                                                                class="{{ $profile->type == 'wa' ? 'fab fa-whatsapp' : 'fas fa-phone' }}"></i>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong>{{ $profile->type == 'wa' ? 'Whatsapp:' : 'Phone:' }}</strong>
-
-                                                            @php
-                                                                $cleanPhone = str_replace(
-                                                                    ['+', '-', ' '],
-                                                                    '',
-                                                                    $profile->phone,
-                                                                );
-
-                                                                if (substr($cleanPhone, 0, 2) === '62') {
-                                                                    $phoneNumber = '0' . substr($cleanPhone, 2);
-                                                                    $waNumber = $cleanPhone;
-                                                                } elseif (substr($cleanPhone, 0, 1) === '0') {
-                                                                    $waNumber = '62' . substr($cleanPhone, 1);
-                                                                    $phoneNumber = $cleanPhone;
-                                                                } else {
-                                                                    $phoneNumber = $cleanPhone;
-                                                                }
-                                                            @endphp
-
-                                                            <a href="{{ $profile->type == 'wa' ? 'https://wa.me/' . $waNumber : 'tel: ' . $phoneNumber }}"
-                                                                target="_blank">{{ $phoneNumber }}</a>
-                                                        </div>
-                                                    @else
-                                                        <div class="icon">
-                                                            <i class="fas fa-phone"></i>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong>Phone</strong>
-                                                            <a href="tel: 085176777785">085176777785</a>
-                                                        </div>
-                                                    @endif
-                                                @else
-                                                    <div class="icon">
-                                                        <i class="fas fa-phone"></i>
-                                                    </div>
-                                                    <div class="content">
-                                                        <strong>Phone</strong>
-                                                        <a href="tel: 085176777785">085176777785</a>
-                                                    </div>
-                                                @endif
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Start Footer Bottom -->
-                <div class="footer-bottom">
-                    <div class="container d-flex justify-content-center">
-                        <div class="mt-0 p-4">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <p class="text-center" style="font-weight: 600">&copy; Copyright 2024. All Rights Reserved
-                                        by <a href="{{ url('/') }}">Hummatech </a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Footer Bottom -->
-            </footer>
-            <!-- End Footer -->
-
-            <!-- jQuery Frameworks
-                                                    ============================================= -->
-            <script src="{{ asset('assets-home/js/jquery-3.6.0.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/popper.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/bootstrap.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/jquery.appear.js') }}"></script>
-            <script src="{{ asset('assets-home/js/jquery.easing.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/jquery.magnific-popup.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/modernizr.custom.13711.js') }}"></script>
-            <script src="{{ asset('assets-home/js/owl.carousel.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/wow.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/progress-bar.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/circle-progress.js') }}"></script>
-            <script src="{{ asset('assets-home/js/isotope.pkgd.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/imagesloaded.pkgd.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/count-to.js') }}"></script>
-            <script src="{{ asset('assets-home/js/YTPlayer.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/bootsnav.js') }}"></script>
-            <script src="{{ asset('assets-home/js/Chart.min.js') }}"></script>
-            <script src="{{ asset('assets-home/js/custom-chart.js') }}"></script>
-            <script src="{{ asset('assets-home/js/main.js') }}"></script>
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script src="owlcarousel/owl.carousel.min.js"></script>
-
-        </body>
-
-        <!-- Mirrored from validthemes.net/site-template/earna/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 26 Feb 2024 03:11:02 GMT -->
-
-        </html>
+</html>
