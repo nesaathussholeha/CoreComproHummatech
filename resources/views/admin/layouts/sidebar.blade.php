@@ -1,302 +1,267 @@
-<aside class="left-sidebar">
-    <!-- Sidebar scroll-->
-    <div>
-      <div class="brand-logo d-flex align-items-center justify-content-between">
-        <a href="index-2.html" class="text-nowrap logo-img">
-          <img src="{{ asset('company.png') }}" class="dark-logo" width="180" alt="" />
-          <img src="{{ asset('company.png') }}" class="light-logo"  width="180" alt="" />
+<ul class="sidebar-links" id="simple-bar">
+    <li class="back-btn">
+        <a href="index.html">
+            <img class="img-fluid" src="{{ asset('assets/images/logo/logo-icon.png') }}" alt="">
         </a>
-        <div class="close-btn d-lg-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-          <i class="ti ti-x fs-8 text-muted"></i>
+        <div class="mobile-back text-end">
+            <span>Back</span>
+            <i class="fa fa-angle-right ps-2" aria-hidden="true"></i>
         </div>
-      </div>
-      <!-- Sidebar navigation-->
-      <nav class="sidebar-nav scroll-sidebar" data-simplebar>
-        <ul id="sidebarnav">
-          <!-- ============================= -->
-          <!-- Home -->
-          <!-- ============================= -->
-          <li class="nav-small-cap">
-            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">Home</span>
-          </li>
-          <!-- =================== -->
-          <!-- Dashboard -->
-          <!-- =================== -->
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="/home" aria-expanded="false">
-              <span>
-                <i class="ti ti-aperture"></i>
-              </span>
-              <span class="hide-menu">Dashboard</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-              <span>
-                <i class="ti ti-aperture"></i>
-              </span>
-              <span class="hide-menu">Gambar Slider</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
-              <span class="d-flex">
-                <i class="ti ti-chart-donut-3"></i>
-              </span>
-              <span class="hide-menu">Layanan</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level">
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Layanan</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="/gallery" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Galeri</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
-              <span class="d-flex">
-                <i class="ti ti-chart-donut-3"></i>
-              </span>
-              <span class="hide-menu">Produk</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level">
-              <li class="sidebar-item">
-                <a href="/category-product" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Kategori</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Produk</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-              <span>
-                <i class="ti ti-aperture"></i>
-              </span>
-              <span class="hide-menu">Protofolio</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
-              <span class="d-flex">
-                <i class="ti ti-chart-donut-3"></i>
-              </span>
-              <span class="hide-menu">Mitra</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level">
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Kategori</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Mitra</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-small-cap">
-            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">Lainnya</span>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
-              <span class="d-flex">
-                <i class="ti ti-chart-donut-3"></i>
-              </span>
-              <span class="hide-menu">Berita</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level">
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Kategori</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Berita</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-              <span>
-                <i class="ti ti-aperture"></i>
-              </span>
-              <span class="hide-menu">Testimoni</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link" href="javascript:void(0)" aria-expanded="false">
-              <span>
-                <i class="ti ti-aperture"></i>
-              </span>
-              <span class="hide-menu">Cabang</span>
-            </a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
-              <span class="d-flex">
-                <i class="ti ti-chart-donut-3"></i>
-              </span>
-              <span class="hide-menu">Pengaturan</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level">
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Profile</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Filosofi logo</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Visi & Misi</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Syarat dan ketentuan</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Jabatan</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Struktur</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Tim</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">FAQ</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Prosedur</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link has-arrow" href="#" aria-expanded="false">
-              <span class="d-flex">
-                <i class="ti ti-chart-donut-3"></i>
-              </span>
-              <span class="hide-menu">Lowongan</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level">
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Profile</span>
-                </a>
-              </li>
-              <li class="sidebar-item">
-                <a href="javascript:void(0)" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Alur Kerja</span>
-                </a>
-              </li>
-
-            </ul>
-          </li>
+    </li>
+    <li class="pin-title sidebar-main-title">
+        <div>
+            <h6>Pinned</h6>
+        </div>
+    </li>
+    <li class="sidebar-main-title">
+        <div>
+            <h6>Master</h6>
+        </div>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title link-nav" href="/home">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-home') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-home') }}"></use>
+            </svg>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title link-nav" href="/hero-section">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-job-search') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-job-search') }}"></use>
+            </svg>
+            <span>Gambar Slider</span>
+        </a>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-bookmark') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-bookmark') }}"></use>
+            </svg>
+            <span>Layanan</span>
+        </a>
+        <ul class="sidebar-submenu">
+            <li>
+                <a href="/service">Layanan</a>
+            </li>
+            {{-- <li>
+                <a href="{{ route('sale.index') }}">Penjualan</a>
+            </li> --}}
+            <li>
+                <a href="/gallery">Galeri</a>
+            </li>
         </ul>
-      </nav>
-      <div class="fixed-profile p-3 bg-light-secondary rounded sidebar-ad mt-3">
-        <div class="hstack gap-3">
-          <div class="john-img">
-            <img src="../../assets/dist/images/profile/user-1.jpg" class="rounded-circle" width="40" height="40" alt="">
-          </div>
-          <div class="john-title">
-            <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
-            <span class="fs-2 text-dark">Designer</span>
-          </div>
-          <button class=m"border-0 bg-transparent text-primary ms-auto" tabindex="0" type="button" aria-label="logout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
-            <i class="ti ti-power fs-6"></i>
-          </button>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-ecommerce') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-ecommerce') }}"></use>
+            </svg>
+            <span>Produk</span>
+        </a>
+        <ul class="sidebar-submenu">
+            <li>
+                <a href="/category-product">Kategori</a>
+            </li>
+            <li >
+                <a href="/admin/product">Produk</a>
+            </li>
+        </ul>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title link-nav" href="/admin/portfolio">
+            <i class="fa-brands fa-wpforms text-white"></i>
+            <span class="ps-4">Portofolio</span>
+        </a>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-learning') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-learning') }}"></use>
+            </svg>
+            <span>Mitra</span>
+        </a>
+        <ul class="sidebar-submenu">
+            <li>
+                <a href="/category-collab">Kategori</a>
+            </li>
+            <li>
+                <a href="/collab">Mitra</a>
+            </li>
+        </ul>
+    </li>
+    <li class="sidebar-main-title">
+        <div>
+            <h6>Lainnya</h6>
         </div>
-      </div>
-      <!-- End Sidebar navigation -->
-    </div>
-    <!-- End Sidebar scroll-->
-  </aside>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-blog') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-blog') }}"></use>
+            </svg>
+            <span>Berita</span>
+        </a>
+        <ul class="sidebar-submenu">
+            <li>
+                <a href="/category-news">Kategori</a>
+            </li>
+            <li>
+                <a href="/admin/news/">Berita</a>
+            </li>
+        </ul>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title link-nav" href="/testimonial">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-user') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-user') }}"></use>
+            </svg>
+            <span>Testimoni</span>
+        </a>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title link-nav" href="/branch">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-maps') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-maps') }}"></use>
+            </svg>
+            <span>Cabang</span>
+        </a>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-knowledgebase') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-knowledgebase') }}"></use>
+            </svg>
+            <span>Pengaturan</span>
+        </a>
+        <ul class="sidebar-submenu">
+            <li>
+                <a href="/setting/profile">Profile</a>
+            </li>
+            <li>
+                <a href="/setting/philosophy">Filosofi Logo</a>
+            </li>
+            <li>
+                <a href="/vision-mision">Visi & Misi</a>
+            </li>
+            <li>
+                <a href="/terms_condition">Syarat & Ketentuan</a>
+            </li>
+            <li>
+                <a href="/setting/departement">Jabatan</a>
+            </li>
+            <li>
+                <a href="/setting/structure">Struktur</a>
+            </li>
+            <li>
+                <a href="/setting/teams">Tim</a>
+            </li>
+            <li>
+                <a href="/faq">FAQ</a>
+            </li>
+            <li>
+                <a href="/procedure">Prosedur</a>
+            </li>
+            <li>
+                <a href="/home-description">Produk beranda</a>
+            </li>
+        </ul>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-contact') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-contact') }}"></use>
+            </svg>
+            <span>Kontak</span>
+        </a>
+        <ul class="sidebar-submenu">
+            {{-- <li>
+                <a href="/message-approval">Approval Pesan </a>
+            </li> --}}
+            <li>
+                <a href="/social-media">Sosial Media</a>
+            </li>
+        </ul>
+    </li>
+    <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg class="stroke-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#stroke-builders') }}"></use>
+            </svg>
+            <svg class="fill-icon">
+                <use href="{{ asset('assets/svg/icon-sprite.svg#fill-builders') }}"></use>
+            </svg>
+            <span>Lowongan</span>
+        </a>
+        <ul class="sidebar-submenu">
+            <li>
+                <a href="/vacancy">Profile</a>
+            </li>
+            <li>
+                <a href="/workflow">Alur Kerja</a>
+            </li>
+        </ul>
+    </li>
+    {{-- <li class="sidebar-list">
+        <i class="fa fa-thumb-tack"></i>
+        <a class="sidebar-link sidebar-title" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" class="text-white"
+                viewBox="0 0 448 512">
+                <path fill="currentColor"
+                    d="M219.3.5c3.1-.6 6.3-.6 9.4 0l200 40C439.9 42.7 448 52.6 448 64s-8.1 21.3-19.3 23.5L352 102.9V160c0 70.7-57.3 128-128 128S96 230.7 96 160v-57.1l-48-9.6v65.1l15.7 78.4c.9 4.7-.3 9.6-3.3 13.3S52.8 256 48 256H16c-4.8 0-9.3-2.1-12.4-5.9s-4.3-8.6-3.3-13.3L16 158.4V86.6C6.5 83.3 0 74.3 0 64c0-11.4 8.1-21.3 19.3-23.5zM111.9 327.7c10.5-3.4 21.8.4 29.4 8.5l71 75.5c6.3 6.7 17 6.7 23.3 0l71-75.5c7.6-8.1 18.9-11.9 29.4-8.5c65 20.9 112 81.7 112 153.6c0 17-13.8 30.7-30.7 30.7H30.7C13.8 512 0 498.2 0 481.3c0-71.9 47-132.7 111.9-153.6" />
+            </svg>
+            <span>Alumni</span>
+        </a>
+        <ul class="sidebar-submenu">
+            <li>
+                <a href="{{ route('force.index') }}">Angkatan</a>
+            </li>
+            <li>
+                <a href="/social-media">Galeri Alumni</a>
+            </li>
+        </ul>
+    </li> --}}
+</ul>
