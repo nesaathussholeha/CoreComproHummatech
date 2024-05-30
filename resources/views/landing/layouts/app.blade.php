@@ -113,7 +113,7 @@
 
     <!-- Start Footer
     ============================================= -->
-    {{-- <footer class="bg-dark text-light">
+    <footer class="bg-dark text-light">
         <div class="container">
             <div class="f-items default-padding">
                 <div class="row">
@@ -123,7 +123,14 @@
                                 style="height: 48px;width: auto;" alt="Logo">
 
                             @isset($profile)
-                                <p>{!! Str::limit(strip_tags($profile->description), 300) !!}</p>
+                                @if (isset($profile[0]) && !empty($profile[0]->description))
+                                    <p>{!! Str::limit(strip_tags($profile[0]->description), 300) !!}</p>
+                                @else
+                                    <p>
+                                        Bertransformasi menjadi perusahaan yang mampu menjawab tantangan di era revolusi
+                                        industri 4.0
+                                    </p>
+                                @endif
                                 <a href="{{ url('/about/profile') }}">Lihat Selengkapnya</a>
                             @else
                                 <p>
@@ -204,15 +211,21 @@
                                                 </div>
                                             </li>
                                             <li>
-                                                @if (isset($profile) && $profile->type != null)
+                                                @if (isset($profile[0]) && !empty($profile[0]))
+                                                    @if ($profile[0]->type != null)
                                                         <div class="icon">
-                                                            <i class="{{ $profile->type == 'wa' ? 'fab fa-whatsapp' : 'fas fa-phone' }}"></i>
-                                                            </div>
-                                                            <div class="content">
-                                                                <strong>{{ $profile->type == 'wa' ? 'Whatsapp:' : 'Phone:' }}</strong>
+                                                            <i
+                                                                class="{{ $profile->type == 'wa' ? 'fab fa-whatsapp' : 'fas fa-phone' }}"></i>
+                                                        </div>
+                                                        <div class="content">
+                                                            <strong>{{ $profile->type == 'wa' ? 'Whatsapp:' : 'Phone:' }}</strong>
 
                                                             @php
-                                                                $cleanPhone = str_replace(['+', '-', ' '], '', $profile->phone);
+                                                                $cleanPhone = str_replace(
+                                                                    ['+', '-', ' '],
+                                                                    '',
+                                                                    $profile->phone,
+                                                                );
 
                                                                 if (substr($cleanPhone, 0, 2) === '62') {
                                                                     $phoneNumber = '0' . substr($cleanPhone, 2);
@@ -225,8 +238,18 @@
                                                                 }
                                                             @endphp
 
-                                                            <a href="{{ $profile->type == 'wa' ? 'https://wa.me/'. $waNumber : 'tel: '. $phoneNumber }}" target="_blank">{{ $phoneNumber }}</a>
+                                                            <a href="{{ $profile->type == 'wa' ? 'https://wa.me/' . $waNumber : 'tel: ' . $phoneNumber }}"
+                                                                target="_blank">{{ $phoneNumber }}</a>
                                                         </div>
+                                                    @else
+                                                        <div class="icon">
+                                                            <i class="fas fa-phone"></i>
+                                                        </div>
+                                                        <div class="content">
+                                                            <strong>Phone</strong>
+                                                            <a href="tel: 085176777785">085176777785</a>
+                                                        </div>
+                                                    @endif
                                                 @else
                                                     <div class="icon">
                                                         <i class="fas fa-phone"></i>
@@ -250,19 +273,19 @@
                         <div class="mt-0 p-4">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <p class="text-center" style="font-weight: 600">&copy; Copyright 2024. All Rights Reserved by <a
-                                        href="{{ url('/') }}">Hummatech </a></p>
+                                    <p class="text-center" style="font-weight: 600">&copy; Copyright 2024. All Rights Reserved
+                                        by <a href="{{ url('/') }}">Hummatech </a></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- End Footer Bottom -->
-            </footer> --}}
+            </footer>
             <!-- End Footer -->
 
             <!-- jQuery Frameworks
-                                    ============================================= -->
+                                                    ============================================= -->
             <script src="{{ asset('assets-home/js/jquery-3.6.0.min.js') }}"></script>
             <script src="{{ asset('assets-home/js/popper.min.js') }}"></script>
             <script src="{{ asset('assets-home/js/bootstrap.min.js') }}"></script>

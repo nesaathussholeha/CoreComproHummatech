@@ -70,14 +70,21 @@
                                     </div>
                                 </li>
                                 <li>
-                                    @if ($profile->type != null)
+                                    @if (isset($profile[0]) && !empty($profile[0]))
+                                    @if ($profile[0]->type != null)
                                         <div class="icon">
-                                            <i class="{{ $profile->type == 'wa' ? 'fab fa-whatsapp' : 'fas fa-phone' }}"></i>
+                                            <i
+                                                class="{{ $profile->type == 'wa' ? 'fab fa-whatsapp' : 'fas fa-phone' }}"></i>
                                         </div>
                                         <div class="content">
-                                            <h5>{{ $profile->type == 'wa' ? 'WhatsApp' : 'Phone' }}</h5>
+                                            <strong>{{ $profile->type == 'wa' ? 'Whatsapp:' : 'Phone:' }}</strong>
+
                                             @php
-                                                $cleanPhone = str_replace(['+', '-', ' '], '', $profile->phone);
+                                                $cleanPhone = str_replace(
+                                                    ['+', '-', ' '],
+                                                    '',
+                                                    $profile->phone,
+                                                );
 
                                                 if (substr($cleanPhone, 0, 2) === '62') {
                                                     $phoneNumber = '0' . substr($cleanPhone, 2);
@@ -98,10 +105,19 @@
                                             <i class="fas fa-phone"></i>
                                         </div>
                                         <div class="content">
-                                            <h5>Phone</h5>
+                                            <strong>Phone</strong>
                                             <a href="tel: 085176777785">085176777785</a>
                                         </div>
                                     @endif
+                                @else
+                                    <div class="icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="content">
+                                        <strong>Phone</strong> <br>
+                                        <a href="tel: 085176777785">085176777785</a>
+                                    </div>
+                                @endif
                                 </li>
                                 <li>
                                     <div class="icon">
