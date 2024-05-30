@@ -1,5 +1,124 @@
 @extends('landing.layouts.app')
+@section('style')
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        .container {
+            position: relative;
+            width: 1000px;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 440px;
+            grid-gap: 40px;
+            grid-template-rows: repeat(3, auto);
+            grid-gap: 20px;
+        }
+
+        .container .card {
+            position: relative;
+            background: #000;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .container .card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 20px 20px rgba(0, 0, 0, .2);
+        }
+
+        /* Usado apenas para as imagens na web. Recomendável usar imagens na pasta */
+        .container .card img {
+            width: 320px;
+            height: 450px;
+            object-fit: cover
+        }
+
+        .container .card .img-box {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .img-box {
+            opacity: 0.5;
+        }
+
+        .container .card .img-box {
+            width: 100%;
+        }
+
+        .container .card .content {
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            bottom: -100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .content {
+            bottom: 0;
+        }
+
+        .container .card:nth-child(1) .content {
+            background: linear-gradient(0deg, #C21833, transparent);
+        }
+
+        .container .card:nth-child(2) .content {
+            background: linear-gradient(0deg, #8012A5, transparent);
+        }
+
+        .container .card:nth-child(3) .content {
+            background: linear-gradient(0deg, #3A414C, transparent);
+        }
+
+        .container .card .content h2 {
+            margin: 0 0 10px;
+            padding: 0;
+            color: #FFF;
+            font-size: 20px;
+        }
+
+        .container .card .content h2 span {
+            color: #FFEB3B;
+            font-size: 16px;
+        }
+
+        .container .card .content p {
+            margin: 0;
+            padding: 0;
+            color: #FFF;
+            font-size: 16px;
+        }
+
+        .container .card .content ul {
+            display: flex;
+            margin: 20px 0 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .card .content ul li {
+            list-style: none;
+        }
+
+        .container .card .content ul li a {
+            color: #FFF;
+            padding: 0 10px;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+    </style>
+@endsection
 @section('content')
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <div class="uk-section uk-padding-remove-vertical in-slideshow-gradient">
         <div id="particles-js" class="uk-light in-slideshow uk-background-contain" data-src="img/in-equity-decor-1.svg"
             data-uk-img data-uk-slideshow>
@@ -17,9 +136,9 @@
 
                                     <div class="uk-visible@m">
                                         <button class="uk-button uk-button-primary uk-border-rounded"
-                                                style="background-color:#FCB42D; color:">
-                                                Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
-                                            </button>
+                                            style="background-color:#FCB42D; color:">
+                                            Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -52,15 +171,13 @@
                         menjawab tantangan di era revolusi industri 4.0 dengan menciptakan produk berbasis
                         integrated system berupa perangkat lunak, seperti </p>
                     <hr class="uk-margin-medium-top uk-margin-medium-bottom">
-                    <button class="uk-button uk-button-primary uk-border-rounded"
-                        style="background-color:#FCB42D; color:">
+                    <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
                         Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
                     </button>
                 </div>
                 <div class="uk-width-2xlarge uk-flex uk-flex-right uk-flex-center@s">
                     <div class="">
-                        <img src="{{ asset('assets/images/Logo_HUMMATECH_Icon.ico') }}" style="width:400px;"
-                            alt="">
+                        <img src="{{ asset('assets/images/Logo_HUMMATECH_Icon.ico') }}" style="width:400px;" alt="">
                     </div>
                 </div>
             </div>
@@ -72,7 +189,7 @@
         <div class="uk-container">
             <div class="uk-grid">
                 <div class="uk-width-1-1">
-                    <h4>Layanan Kami</h4>
+                    <h2 cl>Layanan Kami</h2>
                 </div>
             </div>
             <div class="uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s uk-margin-bottom"
@@ -83,10 +200,10 @@
                             <span class="in-product-name red">SD</span>
                             <h5 class="uk-margin-remove">Software Development</h5>
                         </div>
-                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah perangkat lunak ....</p>
-                        <a href="#"
-                            class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat Selengkapnya<i
-                                class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah
+                            perangkat lunak ....</p>
+                        <a href="#" class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat
+                            Selengkapnya<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                     </div>
                 </div>
                 <div>
@@ -95,10 +212,10 @@
                             <span class="in-product-name red">SD</span>
                             <h5 class="uk-margin-remove">Software Development</h5>
                         </div>
-                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah perangkat lunak ....</p>
-                        <a href="#"
-                            class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat Selengkapnya<i
-                                class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah
+                            perangkat lunak ....</p>
+                        <a href="#" class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat
+                            Selengkapnya<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                     </div>
                 </div>
                 <div>
@@ -107,10 +224,10 @@
                             <span class="in-product-name red">SD</span>
                             <h5 class="uk-margin-remove">Software Development</h5>
                         </div>
-                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah perangkat lunak ....</p>
-                        <a href="#"
-                            class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat Selengkapnya<i
-                                class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah
+                            perangkat lunak ....</p>
+                        <a href="#" class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat
+                            Selengkapnya<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                     </div>
                 </div>
                 <div>
@@ -119,10 +236,10 @@
                             <span class="in-product-name red">SD</span>
                             <h5 class="uk-margin-remove">Software Development</h5>
                         </div>
-                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah perangkat lunak ....</p>
-                        <a href="#"
-                            class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat Selengkapnya<i
-                                class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah
+                            perangkat lunak ....</p>
+                        <a href="#" class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat
+                            Selengkapnya<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                     </div>
                 </div>
                 <div>
@@ -131,10 +248,10 @@
                             <span class="in-product-name red">SD</span>
                             <h5 class="uk-margin-remove">Software Development</h5>
                         </div>
-                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah perangkat lunak ....</p>
-                        <a href="#"
-                            class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat Selengkapnya<i
-                                class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah
+                            perangkat lunak ....</p>
+                        <a href="#" class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat
+                            Selengkapnya<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                     </div>
                 </div>
                 <div>
@@ -143,152 +260,242 @@
                             <span class="in-product-name red">SD</span>
                             <h5 class="uk-margin-remove">Software Development</h5>
                         </div>
-                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah perangkat lunak ....</p>
-                        <a href="#"
-                            class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat Selengkapnya<i
-                                class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+                        <p>Melayani pembuatan software berdasarkan kebutuhan klien/ customer. Produk yang dihasilkan adalah
+                            perangkat lunak ....</p>
+                        <a href="#" class="uk-button uk-button-text uk-float-right uk-position-bottom-right">Lihat
+                            Selengkapnya<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- section content end -->
+    <div class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m in-card-10" data-uk-grid>
+                <div class="uk-width-1-1">
+                    <h2 class="uk-margin-remove uk-text-center">Menghadirkan produk dengan kualitas dan inovasi terbaik</h2>
+                    <p class="uk-text-center">
+                        Kami berkomitmen untuk menghadirkan produk-produk berkualitas tinggi yang dipadukan dengan inovasi
+                        terdepan, memenuhi kebutuhan dan harapan konsumen dengan sempurna.
+                    </p>
+                </div>
+                <div>
+                    <div
+                        class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded uk-light in-card-green">
+                        <div class="in-icon-wrap uk-margin-bottom">
+                            <i class="fas fa-seedling fa-lg"></i>
+                        </div>
+                        <h4 class="uk-margin-top">
+                            <a href="#">Mischool.id<i class="fas fa-chevron-right uk-float-right"></i></a>
+                        </h4>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur. Mauris sed aliquet arcu eleifend elementum magnis
+                            consectetur metus sed. Et ultrices facilisi pellentesque quis auctor orci eu. A erat vitae risus
+                            mi at eget. Donec adipiscing fringilla ultrices arcu magnis purus eu.</p>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded uk-light in-card-blue">
+                        <div class="in-icon-wrap uk-margin-bottom">
+                            <i class="fas fa-seedling fa-lg"></i>
+                        </div>
+                        <h4 class="uk-margin-top">
+                            <a href="#">Mischool.id<i class="fas fa-chevron-right uk-float-right"></i></a>
+                        </h4>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur. Mauris sed aliquet arcu eleifend elementum magnis
+                            consectetur metus sed. Et ultrices facilisi pellentesque quis auctor orci eu. A erat vitae risus
+                            mi at eget. Donec adipiscing fringilla ultrices arcu magnis purus eu.</p>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        class="uk-card uk-card-default uk-card-body uk-box-shadow-small uk-border-rounded uk-light in-card-purple">
+                        <div class="in-icon-wrap uk-margin-bottom">
+                            <i class="fas fa-seedling fa-lg"></i>
+                        </div>
+                        <h4 class="uk-margin-top">
+                            <a href="#">Mischool.id<i class="fas fa-chevron-right uk-float-right"></i></a>
+                        </h4>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur. Mauris sed aliquet arcu eleifend elementum magnis
+                            consectetur metus sed. Et ultrices facilisi pellentesque quis auctor orci eu. A erat vitae risus
+                            mi at eget. Donec adipiscing fringilla ultrices arcu magnis purus eu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- section content begin -->
+    <div class="uk-section">
+        <div class="uk-width-1-1@m uk-text-center ">
+            <h1><span class="in-highlight">MITRA KAMI</span></h1>
+        </div>
+        <div class="uk-container  uk-padding-remove-vertical in-equity-18">
+            <div class="uk-grid" data-uk-grid>
+                <div class="uk-width-1-1">
+                    <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+                        <div class="uk-grid-collapse uk-child-width-1-6@m uk-child-width-1-2@s
+uk-text-center in-client-logo-6"
+                            data-uk-grid>
+                            <div class="uk-tile uk-tile-default">
+                                <img class="uk-margin-remove" src="assets_landing/img/in-equity-payment-1.svg"
+                                    alt="client-logo" width="167" height="55">
+                            </div>
+                            <div class="uk-tile uk-tile-default">
+                                <img class="uk-margin-remove" src="assets_landing/img/in-equity-payment-2.svg"
+                                    alt="client-logo" width="167" height="55">
+                            </div>
+                            <div class="uk-tile uk-tile-default">
+                                <img class="uk-margin-remove" src="assets_landing/img/in-equity-payment-3.svg"
+                                    alt="client-logo" width="167" height="55">
+                            </div>
+                            <div class="uk-tile uk-tile-default">
+                                <img class="uk-margin-remove" src="assets_landing/img/in-equity-payment-4.svg"
+                                    alt="client-logo" width="167" height="55">
+                            </div>
+                            <div class="uk-tile uk-tile-default">
+                                <img class="uk-margin-remove" src="assets_landing/img/in-equity-payment-5.svg"
+                                    alt="client-logo" width="167" height="55">
+                            </div>
+                            <div class="uk-tile uk-tile-default">
+                                <img class="uk-margin-remove" src="assets_landing/img/in-equity-payment-6.svg"
+                                    alt="client-logo" width="167" height="55">
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- section content begin -->
-    <div class="uk-section in-equity-4">
-        <div class="uk-container uk-margin-top uk-margin-medium-bottom">
-            <div class="uk-grid uk-child-width-1-2@m in-testimonial-2" data-uk-grid>
-                <div class="uk-width-1-1@m uk-text-center">
-                    <h1>More than <span class="in-highlight">23,000</span> traders joined</h1>
-                </div>
-                <div>
-                    <div class="uk-background-contain uk-background-top-left" data-src="img/in-equity-4-blob-1.svg"
-                        data-uk-img>
-                        <div class="uk-flex uk-flex-middle">
-                            <div class="uk-margin-right">
-                                <div class="uk-background-primary uk-border-pill">
-                                    <img class="uk-align-center uk-border-pill" src="img/in-lazy.gif"
-                                        data-src="img/blockit/in-team-1.png" alt="client-1" width="100"
-                                        height="100" data-uk-img>
-                                </div>
-                            </div>
-                            <div>
-                                <h5 class="uk-margin-remove-bottom">Angela Nannenhorn</h5>
-                                <p class="uk-text-muted uk-margin-remove-top">from United Kingdom</p>
-                            </div>
-                        </div>
-                        <blockquote>
-                            <p>Very convenience for trader, spread for gold is relatively low compare to other
-                                broker</p>
-                        </blockquote>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-background-contain uk-background-top-left" data-src="img/in-equity-4-blob-2.svg"
-                        data-uk-img>
-                        <div class="uk-flex uk-flex-middle">
-                            <div class="uk-margin-right">
-                                <div class="uk-background-primary uk-border-pill">
-                                    <img class="uk-align-center uk-border-pill" src="img/in-lazy.gif"
-                                        data-src="img/blockit/in-team-8.png" alt="client-2" width="100"
-                                        height="100" data-uk-img>
-                                </div>
-                            </div>
-                            <div>
-                                <h5 class="uk-margin-remove-bottom">Wade Palmer</h5>
-                                <p class="uk-text-muted uk-margin-remove-top">from Germany</p>
-                            </div>
-                        </div>
-                        <blockquote>
-                            <p>One of the best FX brokers, I have been using! their trading conditions are excellent
-                            </p>
-                        </blockquote>
-                    </div>
-                </div>
-                <div class="uk-width-1-1@m uk-text-center">
-                    <a href="#" class="uk-button uk-button-text">See more traders stories from all over the
-                        world<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
+
                 </div>
             </div>
+        </div>
+        <div class="uk-width-1-1@m uk-text-center uk-margin-medium-top">
+            <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
+                Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
+            </button>
         </div>
     </div>
     <!-- section content end -->
-    <!-- section content begin -->
-    <div class="uk-section in-equity-5">
-        <div class="uk-container uk-margin-remove-bottom">
-            <div class="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
-                <div>
-                    <div class="uk-flex uk-flex-left in-award">
-                        <div class="uk-margin-small-right">
-                            <img src="img/in-lazy.gif" data-src="img/in-equity-5-award-1.svg" alt="award-1"
-                                width="91" height="82" data-uk-img>
-                        </div>
-                        <div>
-                            <h6>Best Mobile Trading App</h6>
-                            <p class="provider">European CEO Magazine</p>
-                            <p class="year">2019</p>
+        <!-- section content begin -->
+        <div class="uk-section in-equity-13">
+            <div class="uk-container uk-margin-medium-bottom">
+                <div class="uk-grid uk-flex uk-flex-center">
+                    <div class="uk-width-3-4@m uk-text-center">
+                        <h1 class="uk-margin-small-bottom"> <span class="in-highlight">BERITA</span></h1>
+                        <p class="uk-text-lead uk-margin-remove-top " >Melangkah Ke Depan: Kabar Terbaru Mengenai Perkembangan Perusahaan Kami</p>
+                    </div>
+                    <div class="uk-width-5-6@m">
+                        <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-margin-top" data-uk-grid>
+                            <div class="">
+                                <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
+                                <article>
+                                    <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20" src="assets_landing/img/in-lazy.gif" data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340" height="170" data-uk-img>
+                                    <h5>
+                                        <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
+                                    </h5>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <div>
+                                            <i class="fas fa-clock fa-xs"></i>
+                                        </div>
+                                        <div>
+                                            <span class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October 16, 2021</span>
+                                        </div>
+                                    </div>
+                                   <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit....
+                                    </p>
+                                </article>
+                            </div>
+                            <div class="">
+                                <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
+                                <article>
+                                    <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20" src="assets_landing/img/in-lazy.gif" data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340" height="170" data-uk-img>
+                                    <h5>
+                                        <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
+                                    </h5>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <div>
+                                            <i class="fas fa-clock fa-xs"></i>
+                                        </div>
+                                        <div>
+                                            <span class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October 16, 2021</span>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit....
+                                    </p>
+                                </article>
+                            </div>
+                            <div class="">
+                                <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
+                                <article>
+                                    <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20" src="assets_landing/img/in-lazy.gif" data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340" height="170" data-uk-img>
+                                    <h5>
+                                        <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
+                                    </h5>
+                                    <div class="uk-flex uk-flex-middle">
+                                        <div>
+                                            <i class="fas fa-clock fa-xs"></i>
+                                        </div>
+                                        <div>
+                                            <span class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October 16, 2021</span>
+                                        </div>
+                                    </div>
+                                   <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit....
+                                    </p>
+                                </article>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div class="uk-flex uk-flex-left in-award">
-                        <div class="uk-margin-small-right">
-                            <img src="img/in-lazy.gif" data-src="img/in-equity-5-award-2.svg" alt="award-2"
-                                width="91" height="82" data-uk-img>
-                        </div>
-                        <div>
-                            <h6>Best Forex Ecn Broker</h6>
-                            <p class="provider">UK Forex awards</p>
-                            <p class="year">2020</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-visible@m">
-                    <div class="uk-flex uk-flex-left in-award">
-                        <div class="uk-margin-small-right">
-                            <img src="img/in-lazy.gif" data-src="img/in-equity-5-award-3.svg" alt="award-3"
-                                width="91" height="82" data-uk-img>
-                        </div>
-                        <div>
-                            <h6>Best Trading Conditions</h6>
-                            <p class="provider">Forex report magazine</p>
-                            <p class="year">2021</p>
-                        </div>
+                    <div class="uk-width-1-1@m uk-text-center uk-margin-medium-top">
+                        <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
+                            Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- section content end -->
+    <!-- section content begin -->
+    <div class="uk-section">
+        <div class="uk-width-1-1@m uk-text-center ">
+            <h1><span class="in-highlight">PORTOFOLIO</span></h1>
+            <h3 class="uk-text-lead uk-margin-remove-top " >Inspirasi dari Karya: Portfolio Hummatech Menggambarkan Keunggulan Produk</h3>
+        </div>
+        <div class="uk-container uk-margin-medium-top	">
+            <div class="container">
+                <div class="card">
+                    <div class="img-box">
+                        <img src="http://4.bp.blogspot.com/_ACU2rg_M86M/TOG_p3liNuI/AAAAAAAAAbE/yMt7vawwkNQ/s1600/homem-vermelho.jpg"
+                            alt="">
+                    </div>
+                    <div class="content">
+                        <h2>Alguém Famoso<br><span>UX/UI Designer</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus, dolor non egestas
+                            mattis.</p>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-width-1-1@m uk-text-center uk-margin-medium-top">
+            <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
+                Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
+            </button>
         </div>
     </div>
     <!-- section content end -->
-    <!-- section content begin -->
-    <div class="uk-section uk-section-primary uk-preserve-color in-equity-6 uk-background-contain uk-background-center"
-        data-src="img/in-equity-decor-2.svg" data-uk-img>
-        <div class="uk-container uk-margin-small-bottom">
-            <div class="uk-grid uk-flex uk-flex-center">
-                <div class="uk-width-2xlarge@m uk-text-center">
-                    <h1>Ready to get started?</h1>
-                    <p class="uk-text-lead">Global access to financial markets from a single account</p>
-                </div>
-                <div class="uk-width-3-4@m uk-margin-medium-top">
-                    <div class="uk-flex uk-flex-center uk-flex-middle button-app">
-                        <div>
-                            <a href="#" class="uk-button uk-button-secondary uk-border-rounded">Open your
-                                account<i class="fas fa-arrow-circle-right uk-margin-small-left"></i></a>
-                        </div>
-                        <div class="uk-margin-left uk-margin-right">
-                            <p class="uk-margin-remove">And download the app</p>
-                        </div>
-                        <div class="uk-margin-right">
-                            <a href="#"><img src="img/in-lazy.gif" data-src="img/in-app-store.svg" alt="app-store"
-                                    width="120" height="40" data-uk-img></a>
-                        </div>
-                        <div>
-                            <a href="#"><img src="img/in-lazy.gif" data-src="img/in-google-play.svg"
-                                    alt="google-play" width="135" height="40" data-uk-img></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection

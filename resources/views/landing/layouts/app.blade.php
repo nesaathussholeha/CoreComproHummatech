@@ -57,7 +57,9 @@
     </main>
     <!-- footer begin -->
     <footer>
-        <div class="uk-section">
+        <div class="uk-section" style="
+        color: white;
+        background-color: black;">
             <div class="uk-container uk-margin-top">
                 <div class="uk-grid">
                     <div class="uk-width-2-3@m">
