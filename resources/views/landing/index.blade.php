@@ -167,7 +167,7 @@
                 <div class="uk-width-expand@m">
                     <h2 class="uk-margin-small-bottom"><span class="in-highlight">Menghadirkan Solusi Terintegrasi untuk
                             Masa Digital</span></h2>
-                    <p class="uk-margin-top uk-text-warning">Kini Hummatech bertransformasi menjadi perusahaan yang mampu
+                    <p class="uk-margin-top">Kini Hummatech bertransformasi menjadi perusahaan yang mampu
                         menjawab tantangan di era revolusi industri 4.0 dengan menciptakan produk berbasis
                         integrated system berupa perangkat lunak, seperti </p>
                     <hr class="uk-margin-medium-top uk-margin-medium-bottom">
@@ -332,6 +332,7 @@
     <div class="uk-section">
         <div class="uk-width-1-1@m uk-text-center ">
             <h1><span class="in-highlight">MITRA KAMI</span></h1>
+            <p class="uk-text-lead uk-margin-remove-top "> Tumbuh bersama: Kolaborasi menuju kesuksesan</p>
         </div>
         <div class="uk-container  uk-padding-remove-vertical in-equity-18">
             <div class="uk-grid" data-uk-grid>
@@ -378,92 +379,112 @@ uk-text-center in-client-logo-6"
         </div>
     </div>
     <!-- section content end -->
-        <!-- section content begin -->
-        <div class="uk-section in-equity-13">
-            <div class="uk-container uk-margin-medium-bottom">
-                <div class="uk-grid uk-flex uk-flex-center">
-                    <div class="uk-width-3-4@m uk-text-center">
-                        <h1 class="uk-margin-small-bottom"> <span class="in-highlight">BERITA</span></h1>
-                        <p class="uk-text-lead uk-margin-remove-top " >Melangkah Ke Depan: Kabar Terbaru Mengenai Perkembangan Perusahaan Kami</p>
-                    </div>
-                    <div class="uk-width-5-6@m">
-                        <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-margin-top" data-uk-grid>
-                            <div class="">
-                                <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
-                                <article>
-                                    <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20" src="assets_landing/img/in-lazy.gif" data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340" height="170" data-uk-img>
-                                    <h5>
-                                        <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
-                                    </h5>
-                                    <div class="uk-flex uk-flex-middle">
-                                        <div>
-                                            <i class="fas fa-clock fa-xs"></i>
-                                        </div>
-                                        <div>
-                                            <span class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October 16, 2021</span>
-                                        </div>
+    <!-- section content begin -->
+    <div class="uk-section in-equity-13">
+        <div class="uk-container uk-margin-medium-bottom">
+            <div class="uk-grid uk-flex uk-flex-center">
+                <div class="uk-width-3-4@m uk-text-center">
+                    <h1 class="uk-margin-small-bottom"> <span class="in-highlight">BERITA</span></h1>
+                    <p class="uk-text-lead uk-margin-remove-top ">Melangkah Ke Depan: Kabar Terbaru Mengenai Perkembangan
+                        Perusahaan Kami</p>
+                </div>
+                <div class="uk-width-5-6@m">
+                    <div class="uk-child-width-1-2@s
+uk-child-width-1-3@m uk-margin-top"
+                        data-uk-grid>
+                        <div class="">
+                            <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
+                            <article>
+                                <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20"
+                                    src="assets_landing/img/in-lazy.gif"
+                                    data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340"
+                                    height="170" data-uk-img>
+                                <h5>
+                                    <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
+                                </h5>
+                                <div class="uk-flex uk-flex-middle">
+                                    <div>
+                                        <i class="fas fa-clock fa-xs"></i>
                                     </div>
-                                   <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit....
-                                    </p>
-                                </article>
-                            </div>
-                            <div class="">
-                                <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
-                                <article>
-                                    <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20" src="assets_landing/img/in-lazy.gif" data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340" height="170" data-uk-img>
-                                    <h5>
-                                        <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
-                                    </h5>
-                                    <div class="uk-flex uk-flex-middle">
-                                        <div>
-                                            <i class="fas fa-clock fa-xs"></i>
-                                        </div>
-                                        <div>
-                                            <span class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October 16, 2021</span>
-                                        </div>
+                                    <div>
+                                        <span
+                                            class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October
+                                            16, 2021</span>
                                     </div>
-                                    <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit....
-                                    </p>
-                                </article>
-                            </div>
-                            <div class="">
-                                <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
-                                <article>
-                                    <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20" src="assets_landing/img/in-lazy.gif" data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340" height="170" data-uk-img>
-                                    <h5>
-                                        <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
-                                    </h5>
-                                    <div class="uk-flex uk-flex-middle">
-                                        <div>
-                                            <i class="fas fa-clock fa-xs"></i>
-                                        </div>
-                                        <div>
-                                            <span class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October 16, 2021</span>
-                                        </div>
+                                </div>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit....
+                                </p>
+                            </article>
+                        </div>
+                        <div class="">
+                            <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
+                            <article>
+                                <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20"
+                                    src="assets_landing/img/in-lazy.gif"
+                                    data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340"
+                                    height="170" data-uk-img>
+                                <h5>
+                                    <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
+                                </h5>
+                                <div class="uk-flex uk-flex-middle">
+                                    <div>
+                                        <i class="fas fa-clock fa-xs"></i>
                                     </div>
-                                   <p>
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit....
-                                    </p>
-                                </article>
-                            </div>
+                                    <div>
+                                        <span
+                                            class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October
+                                            16, 2021</span>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit....
+                                </p>
+                            </article>
+                        </div>
+                        <div class="">
+                            <span class="uk-label in-label-small uk-margin-remove-bottom">News</span>
+                            <article>
+                                <img class="uk-border-rounded uk-width-1-1 in-offset-bottom-20"
+                                    src="assets_landing/img/in-lazy.gif"
+                                    data-src="{{ asset('assets/images/mischool.jpg') }}" alt="news" width="340"
+                                    height="170" data-uk-img>
+                                <h5>
+                                    <a href="#">Inflation and sanctions weaken ruble against the dollar</a>
+                                </h5>
+                                <div class="uk-flex uk-flex-middle">
+                                    <div>
+                                        <i class="fas fa-clock fa-xs"></i>
+                                    </div>
+                                    <div>
+                                        <span
+                                            class="uk-text-small uk-text-uppercase uk-text-muted uk-margin-small-left">October
+                                            16, 2021</span>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit....
+                                </p>
+                            </article>
                         </div>
                     </div>
-                    <div class="uk-width-1-1@m uk-text-center uk-margin-medium-top">
-                        <button class="uk-button uk-button-primary uk-border-rounded" style="background-color:#FCB42D; color:">
-                            Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
-                        </button>
-                    </div>
+                </div>
+                <div class="uk-width-1-1@m uk-text-center uk-margin-medium-top">
+                    <button class="uk-button uk-button-primary uk-border-rounded"
+                        style="background-color:#FCB42D; color:">
+                        Selengkapnya <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
+                    </button>
                 </div>
             </div>
         </div>
-        <!-- section content end -->
+    </div>
+    <!-- section content end -->
     <!-- section content begin -->
     <div class="uk-section">
         <div class="uk-width-1-1@m uk-text-center ">
             <h1><span class="in-highlight">PORTOFOLIO</span></h1>
-            <h3 class="uk-text-lead uk-margin-remove-top " >Inspirasi dari Karya: Portfolio Hummatech Menggambarkan Keunggulan Produk</h3>
+            <h3 class="uk-text-lead uk-margin-remove-top ">Inspirasi dari Karya: Portfolio Hummatech Menggambarkan
+                Keunggulan Produk</h3>
         </div>
         <div class="uk-container uk-margin-medium-top	">
             <div class="container">
