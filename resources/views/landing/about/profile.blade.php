@@ -14,80 +14,9 @@
 @endforeach
 @endsection
 @endsection
+
 @section('style')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
-    <style>
-        .subtitle {
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #1273eb;
-            margin-top: -5px;
-            display: inline-block;
-            background: linear-gradient(90deg, rgba(18, 115, 235, 1) 30%, rgba(4, 215, 242, 1) 100%);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .about-us-area .thumb {
-            padding-left: unset;
-            /* padding-right: 50px; */
-        }
-
-        .about-us-area .thumb::after {
-            right: 0;
-            top: 5rem !important;
-            left: unset !important;
-        }
-
-        .about-us-area .container {
-            position: relative;
-        }
-
-        .about-us-area .about-triangle {
-            position: absolute;
-            z-index: -1;
-            top: -7.5rem;
-            right: -7.5rem;
-        }
-
-        @media screen and (max-width: 992px) {
-            .about-us-area .about-triangle {
-                right: 0;
-            }
-
-            .about-us-area .thumb {
-                padding-top: 50px;
-                padding-right: unset;
-            }
-        }
-
-        .pagination {
-            display: flex !important;
-            gap: .5rem;
-        }
-
-        .pagination .page-item {
-            margin: 0 !important;
-        }
-
-        .pagination .page-item .page-link {
-            padding: .75rem 1rem !important;
-            border-radius: 8px;
-            margin: 0;
-        }
-
-        @media screen and (min-width: 992px) {
-            .text-lg-start {
-                text-align: left !important;
-            }
-        }
-        .ql-align-justify{
-            text-align: justify !important;
-        }
-    </style>
 @endsection
 
 @section('seo')
@@ -117,65 +46,59 @@
 <meta name="og:description" content="Perusahaan Software House terbaik se-Jawa Timur" />
 @endsection
 
-@section('content')
-    <div class="breadcrumb-area text-center shadow dark text-light bg-cover"
-        style="background-image: url('{{ $background != null && $background->show_in == 'Tentang Kami' && $background->about_in == 'Profile' ? asset('storage/'. $background->image) : asset('assets_landing/background/Profile.jpg') }}');">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1>Tentang Kami</h1>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Beranda</a></li>
-                        <li class="active">Tentang Kami</li>
-                    </ul>
-                </div>
+@section('header')
+<div class="uk-section uk-padding-remove-vertical in-equity-breadcrumb">
+    <div class="uk-container">
+        <div class="uk-grid">
+            <div class="uk-width-1-1">
+                <ul class="" style="padding-top: 13px;padding-bottom: 16px;color:white">
+                    <li ><a href="#" style="color: white">Profil</a></li>
+                </ul>
             </div>
         </div>
     </div>
-
-    <div class="about-us-area pt-5 mb-5">
-        <div class="container">
-            <img src="{{ asset('assets-home/img/about-polygon.svg') }}" class="about-triangle" alt="Polygon" />
-            <div class="about-items">
-                <div class="row align-center justify-content-center">
-                    <div class="col-lg-6 info text-center text-lg-start">
-                        <h4 class="subtitle">Profile Perusahaan</h4>
-                        @forelse ($profiles as $profile)
-                        <h2>{{ $profile->title }}</h2>
-
-                        <img src="{{ asset('storage/' . $profile->image) }}" alt="Thumb"
-                            class="w-75 mb-3 d-block mx-auto d-lg-none" />
-                        <p class="text-justify">
-                            {!! $profile->description !!}
-                        </p>
-
-                        @if ($profile->proposal)
-                            <a class="btn btn-gradient effect btn-md" target="_blank"
-                                href="{{ $profile->proposal }}"
-                               >Lihat Profil Lengkap</a>
-                        @endif
-                    </div>
-                    <div class="col-lg-6 d-none d-md-none d-lg-inline">
-                        <div class="thumb">
-                            <img src="{{ asset('storage/' . $profile->image) }}" alt="Thumb" style="max-width: 80%; max-height: auto; display: inline-block;">
-                        </div>
-                    </div>
-
-                @empty
-                <div class="col-12">
-                    <div class="d-flex justify-content-center">
-                        <img src="{{ asset('nodata-gif.gif') }}" alt="" width="800px">
-                    </div>
-                    <h4 class="text-center text-dark" style="font-weight:600">
-                        Belum ada profile perusahaan
-                    </h4>
-                </div>
-                    @endforelse
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 @endsection
+
+@section('content')
+
+<div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid uk-grid-stack" data-uk-grid>
+            <div class="uk-width-3-5@m uk-first-column">
+                <h3 class="uk-margin-remove">
+                    <span class="in-highlight">
+                        Profil Perusahaan
+                    </span>
+                </h3>
+                <h1>PT Humma teknologi indonesia</h1>
+                <p>
+                    <span class="uk-text-warning">HUMMATECH</span> merupakan perusahaan yang bergerak di bidang teknologi informasi yang berdiri sejak 21 Mei 2013. Hummatech dinaungi oleh badan hukum
+                    <span class="uk-text-warning">PT. HUMMA TEKNOLOGI INDONESIA</span> dan telah disahkan oleh KEMENKUMHAM Republik Indonesia Nomor AHU-0057079.AH.01.01.
+                </p>
+                <p>
+                    Hummatech melayani jasa pengembangan perangkat lunak, baik berbasis desktop, web, dan mobile apps. Mitra kami meliputi perorangan, swasta, bahkan juga lembaga pemerintahan.
+                </p>
+                <p>
+                    Kini Hummatech bertransformasi menjadi perusahaan yang mampu menjawab tantangan di era revolusi industri 4.0 dengan menciptakan produk berbasis integrated system berupa perangkat lunak berbasis web dan mobile, Internet of Things (IoT), Artificial Intelligence (AI), Game, dan Augmented Reality.
+                </p>
+                <p>
+                    Hummatech juga telah melebarkan sayapnya, tidak hanya dikenal di Indonesia, tetapi juga dipercaya oleh mitra dari luar negeri, yaitu Belanda dalam mengembangan software dan integrated system.
+                </p>
+                <a href="#" class="uk-button uk-button-primary uk-border-rounded">Lihat Profil Lengkap
+                    <i class="fas fa-arrow-circle-right uk-margin-small-left"></i>
+                </a>
+            </div>
+            <div class="uk-width-2-5@m uk-grid-margin uk-first-column">
+                <img src="{{ asset('assets/images/Logo_HUMMATECH_Icon.ico') }}"  style="width:400px;" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection
+
+
 @section('script')
     <script>
         $(document).ready(function() {
