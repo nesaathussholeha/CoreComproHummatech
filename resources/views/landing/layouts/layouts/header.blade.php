@@ -16,7 +16,7 @@
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     <li><a href="about.html">Profile</a></li>
                                     <li><a href="blog.html">Visi & Misi</a></li>
-                                    <li><a href="careers.html">Struktur Organisasi</a></li>
+                                    <li><a href="/about/company-structure">Struktur Organisasi</a></li>
                                     <li><a href="contact.html">Struktur Perusahaan</a></li>
                                     <li><a href="contact.html">Logo</a></li>
                                     <li><a href="contact.html">Tim</a></li>
