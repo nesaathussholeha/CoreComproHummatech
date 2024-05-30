@@ -15,26 +15,26 @@
     <meta name="author" content="Indonez">
     <meta name="theme-color" content="#FCB42D">
     <!-- preload assets -->
-    <link rel="preload" href="assets_landing/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets_landing/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets_landing/fonts/archivo-v18-latin-regular.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="{{ asset('assets_landing/fonts/fa-brands-400.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets_landing/fonts/fa-solid-900.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets_landing/fonts/archivo-v18-latin-regular.woff2') }}" as="font" type="font/woff2"
         crossorigin>
-    <link rel="preload" href="assets_landing/fonts/archivo-v18-latin-300.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="{{ asset('assets_landing/fonts/archivo-v18-latin-300.woff2') }}" as="font" type="font/woff2"
         crossorigin>
-    <link rel="preload" href="assets_landing/fonts/archivo-v18-latin-700.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="{{ asset('assets_landing/fonts/archivo-v18-latin-700.woff2') }}" as="font" type="font/woff2"
         crossorigin>
-    <link rel="preload" href="assets_landing/css/style.css" as="style">
-    <link rel="preload" href="assets_landing/js/vendors/uikit.min.js" as="script">
-    <link rel="preload" href="assets_landing/js/utilities.min.js" as="script">
-    <link rel="preload" href="assets_landing/js/config-theme.js" as="script">
+    <link rel="preload" href="{{ asset('assets_landing/css/style.css') }}" as="style">
+    <link rel="preload" href="{{ asset('assets_landing/js/vendors/uikit.min.js') }}" as="script">
+    <link rel="preload" href="{{ asset('assets_landing/js/utilities.min.js') }}" as="script">
+    <link rel="preload" href="{{ asset('assets_landing/js/config-theme.js') }}" as="script">
     <!-- stylesheet -->
-    <link rel="stylesheet" href="assets_landing/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets_landing/css/style.css') }}">
     <!-- uikit -->
-    <script src="assets_landing/js/vendors/uikit.min.js"></script>
+    <script src="{{ asset('assets_landing/js/vendors/uikit.min.js') }}"></script>
     <!-- favicon -->
-    <link rel="shortcut icon" href="assets_landing/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets_landing/img/favicon.ico') }}" type="image/x-icon">
     <!-- touch icon -->
-    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('assets_landing/img/apple-touch-icon.png') }}">
     <title>Homepage</title>
     @yield('style')
 </head>
@@ -157,11 +157,11 @@
     <!-- to top end -->
     <!-- javascript -->
     @yield('script')
-    <script src="assets_landing/js/vendors/tradingview-widget.min.js"></script>
-    <script src="assets_landing/js/vendors/particles.min.js"></script>
-    <script src="assets_landing/js/config-particles.js"></script>
-    <script src="assets_landing/js/utilities.min.js"></script>
-    <script src="assets_landing/js/config-theme.js"></script>
+    <script src="{{ asset('assets_landing/js/vendors/tradingview-widget.min.js') }}"></script>
+    <script src="{{ asset('assets_landing/js/vendors/particles.min.js') }}"></script>
+    <script src="{{ asset('assets_landing/js/config-particles.js') }}"></script>
+    <script src="{{ asset('assets_landing/js/utilities.min.js') }}"></script>
+    <script src="{{ asset('assets_landing/js/config-theme.js') }}"></script>
 </body>
 <!-- Mirrored from www.indonez.com/html-demo/equity/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 May 2024 05:55:09 GMT -->
 
