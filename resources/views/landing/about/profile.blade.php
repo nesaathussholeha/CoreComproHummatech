@@ -29,8 +29,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         object-fit: cover;
     }
 
@@ -43,6 +43,7 @@
         z-index: 1;
     }
     </style>
+
 
 @endsection
 
@@ -91,15 +92,14 @@
 
 <div class="uk-section">
     <div class="uk-container">
-        <div class="uk-grid uk-grid-stack" data-uk-grid>
+        <div class="uk-grid uk-grid-stack uk-flex-middle" data-uk-grid>
             <div class="uk-width-3-5@m uk-first-column">
                 <h3 class="uk-margin-remove">
                     <span class="in-highlight">
-                        Profil Perusahaan
-                        
+                        Profile Perusahaan
                     </span>
                 </h3>
-                <h1>PT Humma teknologi indonesia</h1>
+                <h1>PT Humma Teknologi Indonesia</h1>
                 <p>
                     <span class="uk-text-warning">HUMMATECH</span> merupakan perusahaan yang bergerak di bidang teknologi informasi yang berdiri sejak 21 Mei 2013. Hummatech dinaungi oleh badan hukum
                     <span class="uk-text-warning">PT. HUMMA TEKNOLOGI INDONESIA</span> dan telah disahkan oleh KEMENKUMHAM Republik Indonesia Nomor AHU-0057079.AH.01.01.
@@ -119,8 +119,8 @@
             </div>
             <div class="uk-width-2-5@m uk-grid-margin uk-first-column">
                 <div class="image-container">
-                    <img src="{{ asset('assets/images/circle.png') }}" class="image-background uk-margin-xlarge-bottom" alt="">
-                    <img src="{{ asset('assets/images/Logo_HUMMATECH_Icon.ico') }}" class="image-foreground" alt="">
+                    <img src="{{ asset('assets/images/circle.png') }}" class="image-background" alt="">
+                    <img src="{{ asset('assets/images/Logo_HUMMATECH_700px.png') }}" class="image-foreground" alt="">
                 </div>
             </div>
         </div>
