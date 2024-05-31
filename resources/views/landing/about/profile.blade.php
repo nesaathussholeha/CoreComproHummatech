@@ -17,6 +17,33 @@
 
 @section('style')
 
+<style>
+    .image-container {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    .image-background,
+    .image-foreground {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+    }
+
+    .image-background {
+        z-index: -1;
+        transform: translate(30px, -30px);
+    }
+
+    .image-foreground {
+        z-index: 1;
+    }
+    </style>
+
 @endsection
 
 @section('seo')
@@ -69,6 +96,7 @@
                 <h3 class="uk-margin-remove">
                     <span class="in-highlight">
                         Profil Perusahaan
+                        
                     </span>
                 </h3>
                 <h1>PT Humma teknologi indonesia</h1>
@@ -90,7 +118,10 @@
                 </a>
             </div>
             <div class="uk-width-2-5@m uk-grid-margin uk-first-column">
-                <img src="{{ asset('assets/images/Logo_HUMMATECH_Icon.ico') }}"  style="width:400px;" alt="">
+                <div class="image-container">
+                    <img src="{{ asset('assets/images/circle.png') }}" class="image-background uk-margin-xlarge-bottom" alt="">
+                    <img src="{{ asset('assets/images/Logo_HUMMATECH_Icon.ico') }}" class="image-foreground" alt="">
+                </div>
             </div>
         </div>
     </div>
